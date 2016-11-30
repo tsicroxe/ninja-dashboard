@@ -7,5 +7,11 @@
   <body>
     <h1> Ninja page!</h1>
     <a href= "/ninjas/new">New Ninja</a>
+    <h2>Ninja List</h2>
+    <% for (ninja in ninjas) { %>
+     <ul>
+       <li><a href='/ninjas/<%=ninjas[ninja].id%>/edit'><%= ninjas[ninja].name %></a></li>
+     </ul>
+    <% } %>
   </body>
 </html>
